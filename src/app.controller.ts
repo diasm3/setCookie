@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Request, Response } from 'express';
 
 @Controller()
 export class AppController {
@@ -8,5 +9,19 @@ export class AppController {
   @Get()
   getHello(): string {
     return this.appService.getHello();
+  }
+  @Get('setcookie')
+  async setCookiTest(@Res() res: Response, @Req() req: Request) {
+    try {
+      res.cookie('Authorization', 'token', {
+        domain: 'localhost',
+        sameSite: 'strict',
+        secure: false,
+        httpOnly: true,
+      });
+      res.send('');
+    } catch (err) {
+      throw new Error(err);
+    }
   }
 }
