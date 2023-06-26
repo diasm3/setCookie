@@ -26,4 +26,17 @@ export class AppController {
       throw new Error(err);
     }
   }
+
+  @Get('getcookie')
+  async getCookiTest(@Res() res: Response, @Req() req: Request) {
+    try {
+      let token = req.cookies;
+      let data = '';
+
+      console.log(token);
+      return token;
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
 }
