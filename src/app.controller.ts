@@ -32,6 +32,7 @@ export class AppController {
     try {
       let token = req.cookies;
       let data = '';
+      console.log(req);
 
       console.log(token);
       return res.send(token);
