@@ -15,7 +15,8 @@ export class AppController {
   async setCookiTest(@Res() res: Response, @Req() req: Request) {
     try {
       res.cookie('Authorization', 'token', {
-        domain: 'vet-hospital.store',
+        // domain: 'vet-hospital.store',
+        domain: 'localhost',
         sameSite: 'strict',
         secure: false,
         httpOnly: true,
