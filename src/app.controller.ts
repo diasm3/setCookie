@@ -17,8 +17,8 @@ export class AppController {
       res.cookie('Authorization', 'token', {
         // domain: 'vet-hospital.store',
         domain: 'localhost',
-        sameSite: 'strict',
-        secure: false,
+        sameSite: 'none',
+        secure: true,
         httpOnly: true,
       });
       res.send('');
