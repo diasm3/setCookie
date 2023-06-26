@@ -34,7 +34,7 @@ export class AppController {
       let data = '';
 
       console.log(token);
-      return token;
+      return res.send(token);
     } catch (err) {
       throw new Error(err);
     }
