@@ -1,7 +1,7 @@
 import { Controller, Get, Query, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Request, Response } from 'express';
-import { SocketOptionsDto } from './socket.dto';
+import { SocketOptionsDto } from './cookie.dto';
 
 @Controller()
 export class AppController {
