@@ -5,6 +5,12 @@
 ## Test URL
 - https://vet-hospital.store/swagger
 
+## SEPC
+- Nestjs
+- Swagger
+- AWS EB
+- https 적용
+
 ## Installation
 
 ```bash
