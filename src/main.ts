@@ -11,7 +11,7 @@ async function bootstrap() {
       'http://localhost:3000',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    exposedHeaders: ['Set-Cookie'],
+    exposedHeaders: ['Set-Cookie','Authorization', 'cookies', ],
     credentials: true,
   });
   swaggerSetting(app);
