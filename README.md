@@ -8,6 +8,7 @@
 
 ## Test 결과
 ```javascript 
+1. 조건은 http - https , https - https로 셋팅했다.
 {
   domain : 'vet-hospital.store',
   sameSite : 'none',
@@ -17,6 +18,7 @@
 ```
 - 위와 같이 셋팅하면 req.headers.cookie 안에 Authorization=token이 들어있는것을 확인 할 수 있다.
 - 단 웹브라우져에서 개발자 모드에서 application탭에서는 쿠키에 내용을 볼 수 없다.
+- 이참에 다들 하는 vercel 프론트엔드도 배포해서 체크해봤다. https://vet-react-diasm3.vercel.app/
 
 ## Installation
 
