@@ -22,6 +22,7 @@ export class AppController {
         secure: info.secure || false,
         httpOnly: info.httpOnly || true,
       });
+      console.log(info)
       res.send(info);
     } catch (err) {
       throw new Error(err);
