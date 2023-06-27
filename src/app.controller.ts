@@ -24,7 +24,7 @@ export class AppController {
         secure: info.secure || false,
         httpOnly: info.httpOnly || true,
       });
-      console.log(info)
+      console.log(info);
       res.send(info);
     } catch (err) {
       throw new Error(err);
@@ -51,11 +51,9 @@ export class AppController {
   // }
 
   @Get('getcookie')
-  async getCookiTest(@Res() res: Response, @Req() req: Request) {
+  async getCookiTest(@Res() res: Response, @Req() req) {
     try {
       let token = req.cookie;
-      let data = '';
-      console.log(req);
 
       console.log(token);
       return res.send(token);
