@@ -36,19 +36,19 @@ export class SocketOptionsDto {
   })
   httpOnly: boolean;
 
-  @ApiProperty({
-    name: 'expires',
-    type: 'string',
-    default: 'true',
-    description:`date`
-  })
-  expires: Date | string;
+  // @ApiProperty({
+  //   name: 'expires',
+  //   type: 'string',
+  //   default: 'true',
+  //   description:`date`
+  // })
+  // expires: Date | string;
 
-  @ApiProperty({
-    name: 'maxAge',
-    type: 'number',
-    default: 'true',
-    description:`24 hours default`
-  })
-  maxAge: number;
+  // @ApiProperty({
+  //   name: 'maxAge',
+  //   type: 'number',
+  //   default: 'true',
+  //   description:`24 hours default`
+  // })
+  // maxAge: number;
 }
