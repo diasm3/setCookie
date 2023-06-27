@@ -7,16 +7,10 @@ import { SocketOptionsDto } from './cookie.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
-
   @Get('setcookie')
   async setCookiTest(@Query() info: SocketOptionsDto, @Res() res: Response) {
     try {
       res.cookie('Authorization', 'token', {
-        // domain: 'vet-hospital.store',
         domain: info.domain || 'localhost',
         sameSite: info.sameSite || 'strict',
         secure: info.secure || false,
@@ -31,11 +25,8 @@ export class AppController {
   @Get('getcookie')
   async getCookiTest(@Res() res: Response, @Req() req: Request) {
     try {
-      let token = req.cookies;
-      let data = '';
-      console.log(req);
+      let token = req.headers.cookie;
 
-      console.log(token);
       return res.send(token);
     } catch (err) {
       throw new Error(err);

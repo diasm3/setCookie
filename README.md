@@ -5,11 +5,18 @@
 ## Test URL
 - https://vet-hospital.store/swagger
 
-## SEPC
-- Nestjs
-- Swagger
-- AWS EB
-- https 적용
+
+## Test 결과
+```javascript 
+{
+  domain : 'vet-hospital.store',
+  sameSite : 'none',
+  secure: 'true',
+  httpOnly: 'false'
+}
+```
+- 위와 같이 셋팅하면 req.headers.cookie 안에 Authorization=token이 들어있는것을 확인 할 수 있다.
+- 단 웹브라우져에서 개발자 모드에서 application탭에서는 쿠키에 내용을 볼 수 없다.
 
 ## Installation
 
