@@ -18,11 +18,11 @@ export class AppController {
       res.cookie('Authorization', 'token', {
         // domain: 'vet-hospital.store',
         domain: info.domain || 'localhost',
-        expires: info.expires || new Date(Date.now() + 86400000), // default to 24 hours
-        maxAge: info.maxAge || 86400000, // default to 24 hours in milliseconds
+        // expires: info.expires || new Date(Date.now() + 86400000), // default to 24 hours
+        // maxAge: info.maxAge || 86400000, // default to 24 hours in milliseconds
         sameSite: info.sameSite || 'strict',
-        secure: info.secure || false,
-        httpOnly: info.httpOnly || true,
+        secure: info.secure || 'false',
+        httpOnly: info.httpOnly || 'true',
       });
       console.log(info)
       res.send(info);
@@ -30,6 +30,25 @@ export class AppController {
       throw new Error(err);
     }
   }
+
+  // @Get('setcookie')
+  // async setCookiTest(@Query() info: SocketOptionsDto, @Res() res: Response) {
+  //   try {
+  //     res.cookie('Authorization', 'token', {
+  //       // domain: 'vet-hospital.store',
+  //       domain: info.domain || 'localhost',
+  //       // expires: info.expires || new Date(Date.now() + 86400000), // default to 24 hours
+  //       // maxAge: info.maxAge || 86400000, // default to 24 hours in milliseconds
+  //       sameSite: info.sameSite || 'strict',
+  //       secure:  'false',
+  //       httpOnly:'true',
+  //     });
+  //     console.log(info)
+  //     res.send(info);
+  //   } catch (err) {
+  //     throw new Error(err);
+  //   }
+  // }
 
   @Get('getcookie')
   async getCookiTest(@Res() res: Response, @Req() req: Request) {
