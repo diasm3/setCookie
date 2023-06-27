@@ -55,6 +55,7 @@ export class AppController {
     try {
       let token = req.cookie;
 
+      console.log(req)
       console.log(req.cookie);
       console.log(token);
       return res.send(token);
