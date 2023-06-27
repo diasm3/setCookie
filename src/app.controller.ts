@@ -18,6 +18,8 @@ export class AppController {
       res.cookie('Authorization', 'token', {
         // domain: 'vet-hospital.store',
         domain: info.domain || 'localhost',
+        expires: info.expires || new Date(Date.now() + 86400000), // default to 24 hours
+        maxAge: info.maxAge || 86400000, // default to 24 hours in milliseconds
         sameSite: info.sameSite || 'strict',
         secure: info.secure || false,
         httpOnly: info.httpOnly || true,

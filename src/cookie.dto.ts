@@ -35,4 +35,20 @@ export class SocketOptionsDto {
     description:`HTTP-only cookies aren't accessible via JavaScript through the property, the XMLHttpRequest and Request APIs to mitigate attacks against cross-site scripting (XSS (en-US)).`,
   })
   httpOnly: boolean;
+
+  @ApiProperty({
+    name: 'expires',
+    type: 'string',
+    default: 'true',
+    description:`date`
+  })
+  expires: Date | string;
+
+  @ApiProperty({
+    name: 'maxAge',
+    type: 'number',
+    default: 'true',
+    description:`24 hours default`
+  })
+  maxAge: number;
 }
