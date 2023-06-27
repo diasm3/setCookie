@@ -53,7 +53,7 @@ export class AppController {
   @Get('getcookie')
   async getCookiTest(@Res() res: Response, @Req() req) {
     try {
-      let token = req.cookie;
+      let token = req.headers.cookie;
 
       console.log(req.headers.cookie)
       console.log(req.cookie);
