@@ -1,9 +1,10 @@
 # SetCookie 테스터기
 ## Description
-- 내가 setCookie 설정하는데 ***같아서 테스트 용도로 만들었음
+- set cookie 설정에 어려움이 많고 기억하기 어려워서 만든 테스터기 입니다.
+- 그냥 테스트용이라 쿠키를 어떻게 설정하느냐에 따라 변경이 가능한가만 체크해보시길 권장합니다.
 
 ## Test URL
-- https://vet-hospital.store/swagger
+- https://api.vet-hospital.store/swagger
 
 
 ## Test 결과
